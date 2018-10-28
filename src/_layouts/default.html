@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" href="{{ "/assets/css/app.css" | prepend: site.baseurl }}">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
   </head>
   <body>
 
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">
+        <a href="/">
+          <img src="/assets/img/koala-2.svg" alt="a seed" style="width:1.5em;">
+          Koalas
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a href="#">
+          something
+          <img src="/assets/img/koala-2.svg" alt="a koala" style="width:2em;">
+        </a>
+        <ul class="menu vertical">
+          <li><a href="/flashcards/">flashcards</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
     {{ content }}
 
     <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}"></script>

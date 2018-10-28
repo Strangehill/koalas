@@ -1,0 +1,40 @@
+---
+---
+
+<style>
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .flashcard-set {
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 48px;
+  }
+  .flashcard-set>div {
+    border: dotted 2px black;
+    padding: 1cm;
+  }
+  .flashcard-set>div>img {
+    width: 20vmin;
+    page-break-inside: avoid;
+  }
+  .flashcard-set>div>div {
+    text-align: center;
+    margin-top: 0.5cm;
+  }
+</style>
+
+<div class="flashcard-set">
+  {% for card in page.cards %}
+    <div>
+      <img src="{{ card[1] }}" alt="{{ card[0] }}">
+      <div>
+        {{ card[0] }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
